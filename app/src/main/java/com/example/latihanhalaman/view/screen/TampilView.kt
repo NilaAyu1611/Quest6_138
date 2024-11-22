@@ -66,7 +66,30 @@ fun TampilView(
             .padding(16.dp),
 
             ){
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = "Data ",
+                    fontSize = 19.sp,
+                    fontWeight = FontWeight.Bold,
+                    fontFamily = FontFamily.Monospace
 
+                )
+                Text(
+                    text = "Periksa Kembali Data Anda",
+                    fontWeight = FontWeight.Light,
+                    fontFamily = FontFamily.Monospace
+                )
+
+
+                Spacer(modifier = Modifier.height(32.dp))
+
+
+            }
         }
 
     }
