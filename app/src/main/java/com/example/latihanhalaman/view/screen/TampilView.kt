@@ -179,7 +179,34 @@ fun TampilView(
                     }
                 }
 
+                Spacer(modifier = Modifier.height(16.dp))
 
+                // Buttons
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly
+                ) {
+                    Button(onClick = { onBackButtonClicked()},
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFF9dbc33),             // Warna latar belakang tombol
+                            contentColor = Color.Black                          // Warna teks tombol
+                        )) {
+                        Text(text = "Kembali",
+                            fontSize = 20.sp,
+                            fontWeight = FontWeight.ExtraBold,
+                            fontFamily = FontFamily.Monospace)
+                    }
+                    Button(onClick = { onResetButtonClicked() },
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFF9dbc33),             // Warna latar belakang tombol
+                            contentColor = Color.Black                          // Warna teks tombol
+                        )) {
+                        Text(text = "Simpan",
+                            fontSize = 20.sp,
+                            fontWeight = FontWeight.ExtraBold,
+                            fontFamily = FontFamily.Monospace)
+                    }
+                }
             }
         }
 
