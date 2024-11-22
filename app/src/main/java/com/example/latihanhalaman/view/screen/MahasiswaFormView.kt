@@ -45,4 +45,17 @@ import com.example.latihanhalaman.R
 
 
 @Composable
-fun MahasiswaFormView
+fun MahasiswaFormView(
+    onSubmitButtonClicked: (MutableList<String>) -> Unit,
+    onBackButtonClicked: () -> Unit
+){
+
+    var nim by remember { mutableStateOf("") }
+    var nama by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+
+    val listData: MutableList<String> = mutableListOf(nim,nama, email)
+
+
+
+}
