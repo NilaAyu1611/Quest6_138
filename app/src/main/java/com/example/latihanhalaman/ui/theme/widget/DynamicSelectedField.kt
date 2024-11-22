@@ -17,21 +17,23 @@ import androidx.compose.ui.Modifier
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DynamicSelectTextField(
+fun DynamicSelectTextField(                     // Fungsi ini adalah widget dropdown dinamis dengan opsi yang diambil dari parameter options.
     selectedValue: String,
     options: List<String>,
     label: String,
     onValueChangedEvent: (String) -> Unit,
     modifier: Modifier = Modifier
 ){
-    var expanded by remember { mutableStateOf(false)}
+    var expanded by remember { mutableStateOf(false)}           // Mengatur status buka/tutup dropdown.
 
-       ExposedDropdownMenuBox(
+
+
+    ExposedDropdownMenuBox(                             // Membungkus elemen dropdown dan menangani logika buka/tutup menu.
         expanded = expanded,
         onExpandedChange = { expanded = !expanded },
         modifier = modifier
     ) {
-        OutlinedTextField(
+        OutlinedTextField(                          // Kotak teks yang menampilkan nilai terpilih dan menyediakan ikon untuk membuka menu dropdown
             readOnly = true,
             value = selectedValue,
             onValueChange = {},
@@ -47,7 +49,7 @@ fun DynamicSelectTextField(
 
         ExposedDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
             options.forEach { option: String ->
-                DropdownMenuItem(
+                DropdownMenuItem(                           // Menu yang menampilkan opsi dari options
                     text = { Text(text = option) },
                     onClick = {
                         expanded = false
