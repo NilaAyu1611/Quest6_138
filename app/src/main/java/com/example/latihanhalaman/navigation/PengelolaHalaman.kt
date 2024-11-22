@@ -21,6 +21,10 @@ import com.example.latihanhalaman.view.viewmodel.MahasiswaViewModel
 import com.example.latihanhalaman.view.viewmodel.RencanaStudyViewModel
 
 enum class Halaman{
+    Splash,
+    Mahasiswa,
+    Matakuliah,
+    Tampil
 
 }
 
