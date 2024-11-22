@@ -29,4 +29,21 @@ import com.example.latihanhalaman.R
 
 //@Preview(showBackground = true)
 @Composable
-fun SplashView
+fun SplashView(
+    onMulaiButton: () -> Unit,
+){
+    Column (modifier = Modifier.
+    fillMaxSize(),
+
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ){
+
+        Image(
+            painter =  painterResource(id = R.drawable.umyy),
+            contentDescription = "", modifier = Modifier.size(250.dp)
+        )
+        Spacer(modifier = Modifier.padding(16.dp))
+
+    }
+}
