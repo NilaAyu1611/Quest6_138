@@ -105,6 +105,40 @@ fun RencanaStudyView(
 
         Spacer(modifier = Modifier.height(16.dp))
 
+        Box(
+            modifier = Modifier
+                .background(
+                    color = Color(0xFFeff6d5),
+                    shape = RoundedCornerShape(
+                        topEnd = 15.dp,
+                        topStart = 15.dp
+                    )
+                )
+                .fillMaxSize(),
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(16.dp)
+            ) {
+                Text(
+                    text = "Pilih Mata Kuliah Peminatan",
+                    fontWeight = FontWeight.Bold
+                )
+                Text(
+                    text = "Silahkan pilih mata kuliah yang anda inginkan",
+                    fontWeight = FontWeight.Light,
+                    fontSize = 12.sp
+                )
+                Spacer(modifier = Modifier.padding(start = 16.dp))
+                DynamicSelectTextField(
+                    selectedValue = chosenDropdown,
+                    options = MataKuliah.options,
+                    label = "Mata Kuliah",
+                    onValueChangedEvent = {
+                        chosenDropdown = it
+                    }
+                )
 
     }
 
