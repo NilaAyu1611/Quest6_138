@@ -185,7 +185,32 @@ fun RencanaStudyView(
                         fontSize = 10.sp
                     )
                 }
-
+                Spacer(modifier = Modifier.padding(16.dp))
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly
+                ) {
+                    Button(onClick = { onBackButtonClicked()},
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFF9dbc33),             // Warna latar belakang tombol
+                            contentColor = Color.Black                          // Warna teks tombol
+                        )) {
+                        Text(text = "Kembali",
+                            fontSize = 20.sp,
+                            fontWeight = FontWeight.ExtraBold,
+                            fontFamily = FontFamily.Monospace)
+                    }
+                    Button(onClick = { onSubmitButtonClicked(listData)}, enabled = checked,
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFF9dbc33),             // Warna latar belakang tombol
+                            contentColor = Color.Black                          // Warna teks tombol
+                        )) {
+                        Text(text = "Lanjut",
+                            fontSize = 20.sp,
+                            fontWeight = FontWeight.ExtraBold,
+                            fontFamily = FontFamily.Monospace)
+                    }
+                }
             }
         }
     }
