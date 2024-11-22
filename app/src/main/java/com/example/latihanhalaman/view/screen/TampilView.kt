@@ -88,6 +88,32 @@ fun TampilView(
 
                 Spacer(modifier = Modifier.height(32.dp))
 
+                Card(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 32.dp), // Add space below the card for buttons
+                    shape = RoundedCornerShape(16.dp),
+                    colors = androidx.compose.material3.CardDefaults.cardColors(
+                        containerColor = Color(0xFFacbe6f).copy(alpha = 0.5f)
+                    )
+
+
+                ) {
+                    Column(modifier = Modifier.padding(16.dp)) {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.End
+                        ) {
+                            Text(
+                                text = mahasiswa.email,
+                                fontSize = 16.sp,
+                                color = Color.Gray,
+                                textAlign = TextAlign.End
+                            )
+                        }
+
+                        Spacer(modifier = Modifier.height(16.dp))
+
 
             }
         }
