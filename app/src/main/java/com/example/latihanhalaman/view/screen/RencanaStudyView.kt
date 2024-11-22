@@ -139,7 +139,36 @@ fun RencanaStudyView(
                         chosenDropdown = it
                     }
                 )
+                Spacer(modifier = Modifier.padding(start = 16.dp))
+                HorizontalDivider()
+                Spacer(modifier = Modifier.padding(start = 16.dp))
+                Text(
+                    text = "Pilih Kelas Belajar",
+                    fontWeight = FontWeight.Bold
+                )
+                Text(
+                    text = "Silahkan pilih kelas dari mata kuliah yang anda inginkan",
+                    fontWeight = FontWeight.Light,
+                    fontSize = 12.sp
+                )
+                Spacer(modifier = Modifier.padding(start = 16.dp))
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly
+                ) {
+                    RuangKelas.kelas.forEach { data ->
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            RadioButton(
+                                selected = pilihanKelas == data,
+                                onClick = { pilihanKelas = data }
+                            )
+                            Text(data)
+                        }
+                    }
+                }
 
+            }
+        }
     }
 
 
