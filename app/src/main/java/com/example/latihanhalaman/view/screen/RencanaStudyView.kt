@@ -60,7 +60,53 @@ fun RencanaStudyView(
     var listData: MutableList<String> = mutableListOf(chosenDropdown,pilihanKelas)
 
 
+    Column (
+        modifier = Modifier
+            .fillMaxSize()
+            .background(color = colorResource(id = R.color.primary)),
+        verticalArrangement = Arrangement.Top
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 16.dp, end = 16.dp, top = 32.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Image(
+                painter = painterResource(id = R.drawable.ti),
+                contentDescription = "",
+                modifier = Modifier
+                    .clip(shape = CircleShape)
+                    .size(50.dp)
+            )
+            Spacer(modifier = Modifier.padding(start = 16.dp))
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = mahasiswa.nama,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 15.sp,
+                    color = Color.Yellow
+                )
+                Text(
+                    text = mahasiswa.nim,
+                    fontWeight = FontWeight.Light,
+                    fontSize = 12.sp,
+                    color = Color.Yellow
+                )
+            }
+            Box {
+                Icon(
+                    imageVector = Icons.Filled.Notifications,
+                    contentDescription = "",
+                    tint = Color.White
+                )
+            }
+        }
 
+        Spacer(modifier = Modifier.height(16.dp))
+
+
+    }
 
 
 }
