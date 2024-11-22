@@ -29,4 +29,14 @@ enum class Halaman{
 }
 
 @Composable
+fun MahasiswaApp(
+    modifier: Modifier = Modifier,
+    viewModel: MahasiswaViewModel = viewModel(),
+    krsViewModel: RencanaStudyViewModel = viewModel(),
+    navController: NavHostController = rememberNavController()
+){
+    val mahasiswaUiState by viewModel.statusUI.collectAsState()
+
+}
+
 
