@@ -89,6 +89,36 @@ fun MahasiswaFormView(
                 )
             }
         }
+        Spacer(modifier = Modifier.padding(top = 16.dp))
+        Box(
+            modifier = Modifier
+                .background(
+                    color = Color(0xFFeff6d5),
+                    shape = RoundedCornerShape(
+                        topEnd = 15.dp,
+                        topStart = 15.dp
+                    )
+                )
+                .fillMaxSize(),
+        ){
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = "Masukkan Data Kamu",
+                    fontSize = 19.sp,
+                    fontWeight = FontWeight.Bold
+                )
+                Text(
+                    text = "Isi sesuai data yang kamu daftarkan",
+                    fontWeight = FontWeight.Light
+                )
 
+
+            }
+        }
     }
 }
