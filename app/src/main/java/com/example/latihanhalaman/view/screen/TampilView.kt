@@ -37,3 +37,13 @@ import com.example.latihanhalaman.model.RencanaStudi
 
 
 @Composable
+fun TampilView(
+    mahasiswa: Mahasiswa,
+    rencanaStudi: RencanaStudi,
+    onBackButtonClicked: () -> Unit,
+    onResetButtonClicked: () -> Unit
+){
+
+
+
+}
