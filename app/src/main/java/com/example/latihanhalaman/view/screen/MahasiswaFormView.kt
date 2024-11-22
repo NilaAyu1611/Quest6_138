@@ -57,5 +57,38 @@ fun MahasiswaFormView(
     val listData: MutableList<String> = mutableListOf(nim,nama, email)
 
 
+    Column (modifier = Modifier
+        .fillMaxSize()
+        .background(
+            color = colorResource(
+                id = R.color.primary
+            )
+        ),horizontalAlignment = Alignment.CenterHorizontally
+    ){
+        Spacer(modifier = Modifier.padding(16.dp))
 
+        Row (verticalAlignment = Alignment.CenterVertically
+        ){
+            Image(painter = painterResource(
+                id = R.drawable.umyy),
+                contentDescription = "",
+                modifier = Modifier.size(45.dp  )
+            )
+            Spacer(modifier = Modifier.padding(16.dp))
+            Column {
+                Text(
+                    text = "Universitas Muhammadiytah Yogyakarta",
+                    color = Color.Yellow,
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Bold
+                )
+                Text(
+                    text = "Unggul dan Islami",
+                    color = Color.Yellow,
+                    fontWeight = FontWeight.Light
+                )
+            }
+        }
+
+    }
 }
