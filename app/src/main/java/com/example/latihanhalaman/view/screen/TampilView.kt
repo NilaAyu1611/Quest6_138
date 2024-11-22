@@ -144,6 +144,24 @@ fun TampilView(
                             )
                         }
 
+                        Spacer(modifier = Modifier.height(8.dp))
+
+                        // Mata Kuliah
+                        Column(modifier = Modifier.padding(start = 16.dp)) {
+                            Text(
+                                text = "Mata Kuliah yang diambil",
+                                fontSize = 18.sp,
+                                color = Color.Black
+                            )
+                            Text(
+                                text = rencanaStudi.namaMK,
+                                fontSize = 16.sp,
+                                color = Color.DarkGray
+                            )
+                        }
+
+                        Spacer(modifier = Modifier.height(8.dp))
+
 
             }
         }
