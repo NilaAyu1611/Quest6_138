@@ -130,6 +130,20 @@ fun TampilView(
 
                         Spacer(modifier = Modifier.height(8.dp))
 
+                        // Nama
+                        Column(modifier = Modifier.fillMaxWidth().padding(start = 16.dp)) {
+                            Text(
+                                text = "Nama",
+                                fontSize = 18.sp,
+                                color = Color.Black
+                            )
+                            Text(
+                                text = mahasiswa.nama,
+                                fontSize = 16.sp,
+                                color = Color.DarkGray
+                            )
+                        }
+
 
             }
         }
