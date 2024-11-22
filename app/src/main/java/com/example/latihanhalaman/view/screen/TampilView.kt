@@ -162,6 +162,23 @@ fun TampilView(
 
                         Spacer(modifier = Modifier.height(8.dp))
 
+                        // Kelas
+                        Column(modifier = Modifier.padding(start = 16.dp)) {
+                            Text(
+                                text = "Kelas",
+                                fontSize = 18.sp,
+                                color = Color.Black
+                            )
+                            Text(
+                                text = rencanaStudi.kelas,
+                                fontSize = 16.sp,
+                                color = Color.DarkGray
+                            )
+                        }
+
+                    }
+                }
+
 
             }
         }
