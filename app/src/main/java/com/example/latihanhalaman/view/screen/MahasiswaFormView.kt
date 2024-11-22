@@ -117,6 +117,28 @@ fun MahasiswaFormView(
                     fontWeight = FontWeight.Light
                 )
 
+                Spacer(modifier = Modifier.padding(8.dp))
+
+                OutlinedTextField(
+                    modifier = Modifier.fillMaxWidth(),
+                    value = nim,
+                    onValueChange = {nim = it},
+                    label = { Text(text = "Nomor Induk Mahasiswa")},
+                    leadingIcon = {
+                        Icon(
+                            imageVector = Icons.Filled.Info,
+                            contentDescription = ""
+                        )
+                    },
+                    keyboardOptions = KeyboardOptions(
+                        keyboardType = KeyboardType.Number,
+                        imeAction = ImeAction.Next
+                    ),
+                    singleLine = true,
+                    shape = RoundedCornerShape(50.dp)
+                )
+
+
 
             }
         }
