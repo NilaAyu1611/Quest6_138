@@ -138,6 +138,26 @@ fun MahasiswaFormView(
                     shape = RoundedCornerShape(50.dp)
                 )
 
+                Spacer(modifier = Modifier.padding(4.dp))
+                OutlinedTextField(
+                    modifier = Modifier.fillMaxWidth(),
+                    value = nama,
+                    onValueChange = {nama = it},
+                    label = { Text(text = "Nama Mahasiswa")},
+                    leadingIcon = {
+                        Icon(
+                            imageVector = Icons.Filled.Person,
+                            contentDescription = ""
+                        )
+                    },
+                    keyboardOptions = KeyboardOptions(
+                        keyboardType = KeyboardType.Phone,
+                        imeAction = ImeAction.Next
+                    ),
+                    singleLine = true,
+                    shape = RoundedCornerShape(50.dp)
+                )
+
 
 
             }
