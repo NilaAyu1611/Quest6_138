@@ -114,6 +114,22 @@ fun TampilView(
 
                         Spacer(modifier = Modifier.height(16.dp))
 
+                        // NIM
+                        Column(modifier = Modifier.fillMaxWidth().padding(start = 16.dp)) {
+                            Text(
+                                text = "Nomor Induk Mahasiswa",
+                                fontSize = 18.sp,
+                                color = Color.Black
+                            )
+                            Text(
+                                text = mahasiswa.nim,
+                                fontSize = 16.sp,
+                                color = Color.DarkGray
+                            )
+                        }
+
+                        Spacer(modifier = Modifier.height(8.dp))
+
 
             }
         }
