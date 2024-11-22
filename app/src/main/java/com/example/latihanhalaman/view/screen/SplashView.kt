@@ -33,7 +33,15 @@ fun SplashView(
     onMulaiButton: () -> Unit,
 ){
     Column (modifier = Modifier.
-    fillMaxSize(),
+    fillMaxSize()
+        .background(                               // Memberi warna background
+            brush = Brush.linearGradient(           // Warna gradient
+                colors = listOf(
+                    Color(0xFFa9c346),  // kuning
+                    Color(0xFF0b1306)   // hijau
+                )
+            )
+        ),
 
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
