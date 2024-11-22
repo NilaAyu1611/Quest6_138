@@ -44,6 +44,31 @@ fun TampilView(
     onResetButtonClicked: () -> Unit
 ){
 
+    Column (modifier = Modifier
+        .fillMaxSize()
+        .background(
+            color = colorResource(
+                id = R.color.primary
+            )
+        ),horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Spacer(modifier = Modifier.padding(23.dp))
 
+        Box(modifier = Modifier
+            .fillMaxSize()
+            .background(
+                color = Color(0xFFeff6d5),
+                shape = RoundedCornerShape(
+                    topEnd = 15.dp,
+                    topStart = 15.dp
+                )
+            )
+            .padding(16.dp),
+
+            ){
+
+        }
+
+    }
 
 }
