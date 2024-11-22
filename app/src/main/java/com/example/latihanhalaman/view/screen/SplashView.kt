@@ -44,6 +44,20 @@ fun SplashView(
             contentDescription = "", modifier = Modifier.size(250.dp)
         )
         Spacer(modifier = Modifier.padding(16.dp))
+        Button(onClick = {onMulaiButton()}, modifier = Modifier.
+        fillMaxWidth().padding(32.dp),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color(0xFFd5d987),             // Warna latar belakang tombol
+                contentColor = Color.Black                          // Warna teks tombol
+            )
+        ) {
+
+            Text(text = "Mulai",
+                fontSize = 23.sp,
+                fontWeight = FontWeight.ExtraBold,
+                fontFamily = FontFamily.Monospace)
+        }
+
 
     }
 }
